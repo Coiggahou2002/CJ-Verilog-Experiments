@@ -1,0 +1,785 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 9508
+License: Customer
+
+Current time: 	Wed Nov 03 20:32:53 CST 2021
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 404 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Administrator
+User home directory: C:/Users/Administrator
+User working directory: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.3
+RDI_DATADIR: C:/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/vivado.log
+Vivado journal file location: 	C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/vivado.jou
+Engine tmp dir: 	C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/.Xil/Vivado-9508-PA30
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.3
+XILINX_SDK: C:/Xilinx/SDK/2018.3
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 699 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 75 MB (+76404kb) [00:00:03]
+// [Engine Memory]: 615 MB (+493664kb) [00:00:03]
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Administrator\Desktop\CJ-Verilog-Experiments\lab1\decoder_38\decoder_38.xpr. Version: Vivado v2018.3 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 85 MB (+5968kb) [00:00:06]
+// [Engine Memory]: 714 MB (+71615kb) [00:00:06]
+// [GUI Memory]: 99 MB (+10781kb) [00:00:06]
+// WARNING: HEventQueue.dispatchEvent() is taking  1408 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 790 MB. GUI used memory: 45 MB. Current time: 11/3/21, 8:32:56 PM CST
+// Project name: decoder_38; location: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38; part: xc7a100tfgg484-1
+// [Engine Memory]: 790 MB (+41967kb) [00:00:07]
+dismissDialog("Open Project"); // bx (cp)
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 141 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 8, true); // B (D, cp) - Node
+// [GUI Memory]: 105 MB (+732kb) [00:02:31]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 8, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+// [GUI Memory]: 111 MB (+675kb) [00:02:32]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, testbench (testbench.v), u_decoder_38 : decoder_38 (decoder_38.v)]", 7, false); // B (D, cp)
+// Elapsed time: 80 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, decoder_38 (decoder_38.v)]", 1, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, decoder_38 (decoder_38.v)]", 1, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectCodeEditor("decoder_38.v", 163, 121); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 206, 93); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 191, 118); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("decoder_38.v", 91, 163); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 91, 169); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 124, 175); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 136, 160); // cl (w, cp)
+// Elapsed time: 188 seconds
+selectCodeEditor("decoder_38.v", 201, 148); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 117, 176); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 126, 161); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("decoder_38.v", 151, 165); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 149, 159); // cl (w, cp)
+// Elapsed time: 40 seconds
+selectCodeEditor("decoder_38.v", 103, 149); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 120, 172); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 130, 164); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("decoder_38.v", 80, 161); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 86, 161); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 197, 125); // cl (w, cp)
+// Elapsed time: 437 seconds
+selectCodeEditor("decoder_38.v", 146, 178); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 78, 162); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 89, 158); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 80, 156); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 80, 156, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("decoder_38.v", 83, 176); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 83, 175, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("decoder_38.v", 83, 160); // cl (w, cp)
+// Elapsed time: 40 seconds
+selectCodeEditor("decoder_38.v", 85, 156); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 89, 168); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 86, 163); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 71 seconds
+selectCodeEditor("decoder_38.v", 86, 158); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 86, 158, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("decoder_38.v", 192, 181); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 86, 162); // cl (w, cp)
+// Elapsed time: 19 seconds
+selectCodeEditor("decoder_38.v", 162, 184); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 61, 52); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 127, 381); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 141, 223); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 215, 199); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("decoder_38.v", 236, 203); // cl (w, cp)
+typeControlKey((HResource) null, "decoder_38.v", 'c'); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 82, 216); // cl (w, cp)
+typeControlKey((HResource) null, "decoder_38.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "decoder_38.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "decoder_38.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "decoder_38.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "decoder_38.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "decoder_38.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "decoder_38.v", 'v'); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 99, 219); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 99, 219, false, false, false, false, true); // cl (w, cp) - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("decoder_38.v", 230, 196); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 220, 213); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 263, 202); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 227, 215); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 211, 244); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 273, 242); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 222, 239); // cl (w, cp)
+// Elapsed time: 24 seconds
+selectCodeEditor("decoder_38.v", 264, 342); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 275, 337); // cl (w, cp)
+// Elapsed time: 18 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("decoder_38.v", 89, 400); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 115, 3); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 198, 364); // cl (w, cp)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("decoder_38.v", 182, 203); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 98, 125); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 185, 410); // cl (w, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Wed Nov  3 20:52:49 2021] Launched synth_1... Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Synthesis Completed: addNotify
+// Elapsed time: 23 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN, "Open Synthesized Design"); // a (Q, ah)
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "Run Implementation"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: [Wed Nov  3 20:53:15 2021] Launched impl_1... Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cp): Implementation Completed: addNotify
+// Elapsed time: 57 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Wed Nov  3 20:54:14 2021] Launched impl_1... Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/runme.log 
+// TclEventType: RUN_FAILED
+// ah (cp): Bitstream Generation Failed: addNotify
+// Elapsed time: 49 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("decoder_38.v", 259, 261); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 239, 137); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 332, 437); // cl (w, cp)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 409, 407); // n (q, cp)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 479, 409); // n (q, cp)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 258, 407); // n (q, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 818 MB. GUI used memory: 55 MB. Current time: 11/3/21, 8:55:26 PM CST
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 498, 408); // n (q, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, false); // B (D, cp)
+// Elapsed time: 59 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ac (al, cp)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ac (al, cp)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cp): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files"); // a (C, c)
+String[] filenames31467 = {"C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/clock.xdc", "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/pin.xdc"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 7 seconds
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Add Sources"); // c (cp)
+// Tcl Message: add_files -fileset constrs_1 -norecurse {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/clock.xdc C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/pin.xdc} 
+// [Engine Memory]: 830 MB (+295kb) [00:23:51]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cp): Synthesis is Out-of-date: addNotify
+// 'cw' command handler elapsed time: 3 seconds
+dismissDialog("Synthesis is Out-of-date"); // A (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Wed Nov  3 20:56:48 2021] Launched synth_1... Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Synthesis Completed: addNotify
+// Elapsed time: 23 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: [Wed Nov  3 20:57:13 2021] Launched impl_1... Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cp): Implementation Completed: addNotify
+// Elapsed time: 68 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Wed Nov  3 20:58:24 2021] Launched impl_1... Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/runme.log 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, pin.xdc]", 5, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, pin.xdc]", 5, false, false, false, false, false, true); // B (D, cp) - Double Click
+// TclEventType: RUN_COMPLETED
+// ah (cp): Bitstream Generation Completed: addNotify
+// Elapsed time: 44 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+// Elapsed time: 17 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (cp):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bx (cp)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cQ, cp)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bx (cp):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// HMemoryUtils.trashcanNow. Engine heap size: 843 MB. GUI used memory: 62 MB. Current time: 11/3/21, 8:59:36 PM CST
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.3   **** Build date : Dec  7 2018-00:40:27     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  2546 ms.
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/decoder_38.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// [Engine Memory]: 1,740 MB (+910453kb) [00:26:54]
+dismissDialog("Auto Connect"); // bx (cp)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (1) ; Programmed", 2, "xc7a100t_0 (1)", 0, true); // t (Q, cp) - Node
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (1) ; Programmed", 2, "xc7a100t_0 (1)", 0, true, false, false, false, true, false); // t (Q, cp) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_PROGRAM_FPGA, "Program Device..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cp): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bx (cp):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cp)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/decoder_38.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // bx (cp)
+// Elapsed time: 151 seconds
+selectCodeEditor("decoder_38.v", 171, 119); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 186, 138); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 231, 173); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 79, 161); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 234, 155); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,759 MB. GUI used memory: 63 MB. Current time: 11/3/21, 9:02:26 PM CST
+selectCodeEditor("decoder_38.v", 77, 163); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 119, 186); // cl (w, cp)
+// Elapsed time: 12 seconds
+selectCodeEditor("decoder_38.v", 190, 122); // cl (w, cp)
+// Elapsed time: 27 seconds
+selectCodeEditor("decoder_38.v", 23, 162); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 150, 164); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 22, 165); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 371, 335); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 24, 168); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 167, 165); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 285, 194); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 25, 163); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 91, 145); // cl (w, cp)
+// Elapsed time: 17 seconds
+selectCodeEditor("decoder_38.v", 432, 282); // cl (w, cp)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cp): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // A (cp)
+// [GUI Memory]: 122 MB (+6066kb) [00:31:09]
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Wed Nov  3 21:03:58 2021] Launched synth_1... Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// Elapsed time: 17 seconds
+selectCodeEditor("decoder_38.v", 113, 155); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 326, 407); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 282, 420); // cl (w, cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Synthesis Completed: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cp)
+selectCodeEditor("decoder_38.v", 122, 432); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 230, 430); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 122, 431); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 151, 425); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 124, 424); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 243, 292); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 201, 222); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 81, 192); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 126, 356); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 222, 368); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("decoder_38.v", 119, 329); // cl (w, cp)
+typeControlKey((HResource) null, "decoder_38.v", 'c'); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 124, 354); // cl (w, cp)
+typeControlKey((HResource) null, "decoder_38.v", 'v'); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 182, 357); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 346, 317); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 315, 353); // cl (w, cp)
+// Elapsed time: 37 seconds
+selectCodeEditor("decoder_38.v", 178, 177); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 251, 162); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 59, 386); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 102, 372); // cl (w, cp)
+// Elapsed time: 20 seconds
+selectCodeEditor("decoder_38.v", 85, 164); // cl (w, cp)
+// Elapsed time: 45 seconds
+selectCodeEditor("decoder_38.v", 45, 216); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 157, 405); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 126, 406); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 273, 174); // cl (w, cp)
+typeControlKey((HResource) null, "decoder_38.v", 'v'); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 47, 387); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 68, 218); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 226, 334); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 251, 370); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 244, 328); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 155, 412); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 50, 408); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 84, 409); // cl (w, cp)
+// Elapsed time: 24 seconds
+selectCodeEditor("decoder_38.v", 325, 364); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 195, 70); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 297, 462); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 214, 421); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 120, 424); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 427, 327); // cl (w, cp)
+// Elapsed time: 18 seconds
+selectCodeEditor("decoder_38.v", 553, 256); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 103, 408); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 162, 404); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 230, 414); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 226, 429); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 184, 160); // cl (w, cp)
+// Elapsed time: 25 seconds
+selectCodeEditor("decoder_38.v", 189, 164); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 264, 156); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 192, 123); // cl (w, cp)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,782 MB. GUI used memory: 63 MB. Current time: 11/3/21, 9:08:51 PM CST
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Wed Nov  3 21:08:53 2021] Launched synth_1... Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Synthesis Completed: addNotify
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cp): Launch Runs: addNotify
+// Elapsed time: 63 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: [Wed Nov  3 21:09:57 2021] Launched impl_1... Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/runme.log 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cp): Implementation Completed: addNotify
+// Elapsed time: 61 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Wed Nov  3 21:11:01 2021] Launched impl_1... Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// ah (cp): Bitstream Generation Completed: addNotify
+// Elapsed time: 72 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_WRITE_CONFIG_MEMORY_FILE, "Generate Memory Configuration File"); // a (Q, ah)
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a (Q, ah)
+selectRadioButton(PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN, "Open Implemented Design"); // a (Q, ah)
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a (Q, ah)
+selectRadioButton(PAResourceCommand.PACommandNames_WRITE_CONFIG_MEMORY_FILE, "Generate Memory Configuration File"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cp)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (1) ; Programmed", 2, "xc7a100t_0 (1)", 0, true, false, false, false, true, false); // t (Q, cp) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_PROGRAM_FPGA, "Program Device..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cp): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bx (cp):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC (cp)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/decoder_38.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (cp)
+// Elapsed time: 138 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pin.xdc", 1); // k (j, cp)
+selectCodeEditor("pin.xdc", 191, 182); // cl (w, cp)
+selectCodeEditor("pin.xdc", 285, 32); // cl (w, cp)
+selectCodeEditor("pin.xdc", 336, 87); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decoder_38.v", 0); // k (j, cp)
+selectCodeEditor("decoder_38.v", 136, 50); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 202, 127); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 189, 159); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 268, 370); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 295, 162); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 314, 374); // cl (w, cp)
+// Elapsed time: 122 seconds
+selectCodeEditor("decoder_38.v", 288, 220); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 313, 118); // cl (w, cp)
+selectCodeEditor("decoder_38.v", 344, 300); // cl (w, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (Q, cp)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cp):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Built simulation snapshot testbench_behav  ****** Webtalk v2018.3 (64-bit)   **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018   **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.  source C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace INFO: [Common 17-206] Exiting Webtalk at Wed Nov  3 21:17:09 2021... 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2018.3 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: source testbench.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,791 MB. GUI used memory: 70 MB. Current time: 11/3/21, 9:17:10 PM CST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// [Engine Memory]: 1,841 MB (+14873kb) [00:44:22]
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: index 3 finished ==================================== Test end! ----PASS!!! $finish called at time : 525 ns : File "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.srcs/sim_1/imports/decoder_38_origin_sources/testbench.v" Line 95 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1912.500 ; gain = 88.914 
+// 'd' command handler elapsed time: 6 seconds
+dismissDialog("Run Simulation"); // e (cp)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Elapsed time: 497 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (Q, cp)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// bx (cp):  Close : addNotify
+selectButton("PAResourceQtoS.SimulationRun_SIMULATION_ALREADY_RUNNING_DO_YOU_Yes", "Yes"); // JButton (C, I)
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// e (cp):  Run Simulation : addNotify
+dismissDialog("Close"); // bx (cp)
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvlog --incr --relax -prj testbench_vlog.prj" 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Vivado Simulator 2018.3 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto c073f43419704473a038726f469503b9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log  Using 2 slave threads. Starting static elaboration Completed static elaboration INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2018.3 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,867 MB. GUI used memory: 71 MB. Current time: 11/3/21, 9:25:40 PM CST
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: source testbench.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: index 3 finished ==================================== Test end! ----PASS!!! $finish called at time : 525 ns : File "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.srcs/sim_1/imports/decoder_38_origin_sources/testbench.v" Line 95 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// 'd' command handler elapsed time: 12 seconds
+dismissDialog("Run Simulation"); // e (cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 2", 3); // k (j, cp)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectButton(RDIResourceCommand.RDICommands_WAVEFORM_SAVE_CONFIGURATION, "Waveform Viewer_waveform_save_configuration"); // B (f, cp)
+// Run Command: RDIResourceCommand.RDICommands_WAVEFORM_SAVE_CONFIGURATION
+// Elapsed time: 16 seconds
+setFileChooser("C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/testbench_behav.wcfg");
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// A (cp): Waveform Configuration File: addNotify
+// Tcl Message: save_wave_config {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/testbench_behav.wcfg} 
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// 'e' command handler elapsed time: 17 seconds
+// Tcl Message: add_files -fileset sim_1 -norecurse C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/testbench_behav.wcfg 
+// Tcl Message: set_property xsim.view C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/testbench_behav.wcfg [get_filesets sim_1] 
+dismissDialog("Waveform Configuration File"); // A (cp)

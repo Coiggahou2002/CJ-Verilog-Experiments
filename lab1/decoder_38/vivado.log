@@ -2,26 +2,201 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Nov  3 15:26:16 2021
-# Process ID: 9540
+# Start of session at: Wed Nov  3 20:32:46 2021
+# Process ID: 9508
 # Current directory: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6720 C:\Users\Administrator\Desktop\CJ-Verilog-Experiments\lab1\decoder_38\decoder_38.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6364 C:\Users\Administrator\Desktop\CJ-Verilog-Experiments\lab1\decoder_38\decoder_38.xpr
 # Log file: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/vivado.log
 # Journal file: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/decoder_38' since last save.
 Scanning sources...
 Finished scanning sources
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.ip_user_files'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-add_files -norecurse C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38_origin_sources/decoder_38.v
 update_compile_order -fileset sources_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38_origin_sources/testbench.v
-update_compile_order -fileset sim_1
-update_compile_order -fileset sim_1
-import_files C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38_origin_sources/decoder_38.v
-import_files -fileset sim_1 C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38_origin_sources/testbench.v
+launch_runs synth_1 -jobs 8
+[Wed Nov  3 20:52:49 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Wed Nov  3 20:53:15 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov  3 20:54:14 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/runme.log
+add_files -fileset constrs_1 -norecurse {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/clock.xdc C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/pin.xdc}
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Wed Nov  3 20:56:48 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Wed Nov  3 20:57:13 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov  3 20:58:24 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/decoder_38.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/decoder_38.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Wed Nov  3 21:03:58 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Wed Nov  3 21:08:53 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Wed Nov  3 21:09:57 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov  3 21:11:01 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.runs/impl_1/decoder_38.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.srcs/sources_1/imports/decoder_38_origin_sources/decoder_38.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_38
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.srcs/sim_1/imports/decoder_38_origin_sources/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto c073f43419704473a038726f469503b9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.srcs/sources_1/imports/decoder_38_origin_sources/decoder_38.v" Line 1. Module decoder_38 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.decoder_38
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Nov  3 21:17:09 2021...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+index 3 finished
+====================================
+Test end!
+----PASS!!!
+$finish called at time : 525 ns : File "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.srcs/sim_1/imports/decoder_38_origin_sources/testbench.v" Line 95
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1912.500 ; gain = 88.914
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto c073f43419704473a038726f469503b9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+index 3 finished
+====================================
+Test end!
+----PASS!!!
+$finish called at time : 525 ns : File "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/decoder_38.srcs/sim_1/imports/decoder_38_origin_sources/testbench.v" Line 95
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+save_wave_config {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/testbench_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/testbench_behav.wcfg
+set_property xsim.view C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab1/decoder_38/testbench_behav.wcfg [get_filesets sim_1]
