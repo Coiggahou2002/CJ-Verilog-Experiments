@@ -9,17 +9,11 @@ reg [36:0] cnt;
 
 wire rst_n = ~rst;
 reg enable = 1'b0;
-wire cnt_end = (cnt == 37'd100000000);
-wire cnt_inc = (cnt != 37'd100000000 && enable);
+wire cnt_end = (cnt == 37'd4);
+wire cnt_inc = (cnt != 37'd4 && enable);
 
 
 always @(posedge clk or negedge rst_n) begin
-	if (enable) begin
-        if (cnt == 37'd99999999) begin
-            led <= {led[14:0],led[15]};
-        end
-    end
-	
     if (button) begin
 		case (switch)
             3'b000: led = 16'b0000_0000_0000_0001;
@@ -46,6 +40,12 @@ always @(posedge clk or negedge rst_n) begin
             3'b110: led = 16'b0000_0000_0111_1111;
             3'b111: led = 16'b0000_0000_1111_1111;
         endcase
+    end
+    
+    if (enable) begin
+        if (cnt == 37'd4) begin
+            led <= {led[14:0],led[15]};
+        end
     end
 end
 

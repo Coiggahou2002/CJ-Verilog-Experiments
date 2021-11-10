@@ -28,7 +28,7 @@ always @(posedge clk) begin
         if (~rst_n) begin
             led <= 8'b0000_0001;
         end
-        else if (cnt == 37'd90000000) begin
+        else if (cnt == 37'd99999999) begin
             led <= {led[6:0],led[7]};
         end
     end

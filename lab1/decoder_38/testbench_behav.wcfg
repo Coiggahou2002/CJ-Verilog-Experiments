@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="524994550fs"></ZoomStartTime>
-      <ZoomEndTime time="525001091fs"></ZoomEndTime>
-      <Cursor1Time time="525000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="525000000fs"></ZoomEndTime>
+      <Cursor1Time time="41934000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="16" />
    <wvobject fp_name="/testbench/clk" type="logic">
@@ -31,10 +31,17 @@
    <wvobject fp_name="/testbench/enable" type="array">
       <obj_property name="ElementShortName">enable[2:0]</obj_property>
       <obj_property name="ObjectShortName">enable[2:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/switch" type="array">
       <obj_property name="ElementShortName">switch[2:0]</obj_property>
       <obj_property name="ObjectShortName">switch[2:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/led" type="array">
+      <obj_property name="ElementShortName">led[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led[7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/button_cnt" type="array">
       <obj_property name="ElementShortName">button_cnt[3:0]</obj_property>
@@ -51,10 +58,6 @@
    <wvobject fp_name="/testbench/result" type="array">
       <obj_property name="ElementShortName">result[4:0][7:0]</obj_property>
       <obj_property name="ObjectShortName">result[4:0][7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/led" type="array">
-      <obj_property name="ElementShortName">led[7:0]</obj_property>
-      <obj_property name="ObjectShortName">led[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/rst" type="logic">
       <obj_property name="ElementShortName">rst</obj_property>
