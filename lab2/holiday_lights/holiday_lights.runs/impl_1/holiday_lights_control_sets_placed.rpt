@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Wed Nov 10 00:56:12 2021
-| Host         : 612-36 running 64-bit major release  (build 9200)
+| Date         : Wed Nov 10 15:19:59 2021
+| Host         : PA02 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file holiday_lights_control_sets_placed.rpt
 | Design       : holiday_lights
 | Device       : xc7a100t
@@ -24,7 +24,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |     4 |
-| Unused register locations in slices containing registers |    18 |
+| Unused register locations in slices containing registers |    10 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,9 +35,7 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      1 |            1 |
-|      3 |            1 |
-|      5 |            1 |
-|    16+ |            1 |
+|    16+ |            3 |
 +--------+--------------+
 
 
@@ -47,25 +45,25 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               9 |            4 |
-| No           | No                    | Yes                    |              37 |           10 |
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              16 |            9 |
+| Yes          | No                    | Yes                    |              37 |           10 |
+| Yes          | Yes                   | No                     |              16 |            4 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+---------------------+---------------+------------------+------------------+----------------+
-|     Clock Signal    | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+---------------------+---------------+------------------+------------------+----------------+
-|  clk_IBUF_BUFG      |               |                  |                1 |              1 |
-|  led_reg[2]_i_2_n_0 |               |                  |                1 |              3 |
-|  led_reg[7]_i_1_n_0 |               |                  |                2 |              5 |
-|  clk_IBUF_BUFG      |               | rst_IBUF         |               10 |             37 |
-+---------------------+---------------+------------------+------------------+----------------+
++----------------+----------------+------------------+------------------+----------------+
+|  Clock Signal  |  Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
++----------------+----------------+------------------+------------------+----------------+
+|  clk_IBUF_BUFG |                |                  |                1 |              1 |
+|  clk_IBUF_BUFG | led0           |                  |                9 |             16 |
+|  clk_IBUF_BUFG | led0           | led[15]_i_1_n_0  |                4 |             16 |
+|  clk_IBUF_BUFG | cnt[0]_i_1_n_0 | rst_IBUF         |               10 |             37 |
++----------------+----------------+------------------+------------------+----------------+
 
 

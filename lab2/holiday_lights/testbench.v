@@ -35,6 +35,7 @@ always @ (posedge clk or negedge rst_n) begin
 end
 
 wire button_pos = (button_cnt == 4'h1);
+wire button_pos_delay = (button_cnt == 4'h3);
 
 wire cnt_end = (cnt == 4'h7);
 
@@ -101,7 +102,7 @@ end
 holiday_lights u_holiday_lights (
     .clk    (clk       ),
 	.rst    (rst       ),
-	.button (button_pos),
+	.button (button_pos_delay),
     .switch (switch    ),
 	.led    (led       )
 );

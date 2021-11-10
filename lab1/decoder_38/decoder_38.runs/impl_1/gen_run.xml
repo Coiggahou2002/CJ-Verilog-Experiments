@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1635944997">
+<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1636525743">
   <File Type="BITSTR-BMM" Name="decoder_38_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="decoder_38_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="decoder_38_timing_summary_init.rpt"/>

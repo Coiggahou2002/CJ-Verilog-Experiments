@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Wed Nov  3 21:10:47 2021
-| Host         : PA30 running 64-bit major release  (build 9200)
+| Date         : Wed Nov 10 14:29:52 2021
+| Host         : PA02 running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file decoder_38_clock_utilization_routed.rpt
 | Design       : decoder_38
 | Device       : 7a100t-fgg484

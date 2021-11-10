@@ -11,15 +11,29 @@ wire rst_n = ~rst;
 wire cnt_end = (cnt == 37'd100000000);
 wire cnt_inc = (cnt != 37'd100000000);
 
-wire signal = led[7];
+reg enable = 1'b0;
 
 initial begin
     led = 8'b0000_0001;
 end
 
 always @(posedge clk) begin
-    if (cnt == 37'd90000000) begin
-        led <= {led[6:0],led[7]};
+    if (button) begin
+        enable <= 1'b1;
+    end
+end
+
+always @(posedge clk) begin
+    if (enable) begin
+        if (~rst_n) begin
+            led <= 8'b0000_0001;
+        end
+        else if (cnt == 37'd90000000) begin
+            led <= {led[6:0],led[7]};
+        end
+    end
+    else begin
+        led <= 8'b0000_0001;
     end
 end
 

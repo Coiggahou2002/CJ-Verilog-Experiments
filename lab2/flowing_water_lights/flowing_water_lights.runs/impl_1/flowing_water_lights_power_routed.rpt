@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Tue Nov  9 23:51:33 2021
-| Host             : 612-36 running 64-bit major release  (build 9200)
+| Date             : Wed Nov 10 14:47:41 2021
+| Host             : PA02 running 64-bit major release  (build 9200)
 | Command          : report_power -file flowing_water_lights_power_routed.rpt -pb flowing_water_lights_power_summary_routed.pb -rpx flowing_water_lights_power_routed.rpx
 | Design           : flowing_water_lights
 | Device           : xc7a100tfgg484-1
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |       93 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       27 |     63400 |            0.04 |
+| Slice Logic    |    <0.001 |       95 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       29 |     63400 |            0.05 |
 |   CARRY4       |    <0.001 |       10 |     15850 |            0.06 |
-|   Register     |    <0.001 |       53 |    126800 |            0.04 |
+|   Register     |    <0.001 |       54 |    126800 |            0.04 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |    <0.001 |       78 |       --- |             --- |
-| I/O            |    <0.001 |       10 |       285 |            3.51 |
+| Signals        |    <0.001 |       80 |       --- |             --- |
+| I/O            |    <0.001 |       11 |       285 |            3.86 |
 | Static Power   |     0.097 |          |           |                 |
 | Total          |     0.098 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+

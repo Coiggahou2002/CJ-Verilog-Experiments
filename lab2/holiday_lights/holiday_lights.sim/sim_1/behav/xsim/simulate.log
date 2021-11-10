@@ -1,0 +1,9 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+wrong at index 1
+=====================================
+Test end!
+----FAIL!!!
+reference   led_num : 2
+test module led_num : 1
+$finish called at time : 285 ns : File "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab2/holiday_lights/testbench.v" Line 98
