@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab2/holiday_lights/holiday_lights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module holiday_lights
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab2/holiday_lights/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab2/201802version_for_old/201802version_for_old.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

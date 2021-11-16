@@ -1,0 +1,7 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+index 6 finished
+====================================
+Test end!
+----PASS!!!
+$finish called at time : 1005 ns : File "D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab2/holiday_lights/testbench.v" Line 88
