@@ -21,8 +21,8 @@ parameter DEVICE_PAUSE = 2'b11;   // 暂停状态
 /**
  * 时钟相关的常量
  */
-parameter CLOCK_PERIOD = 32'd4;     // 时钟重置周期
-parameter LED_SWITCH_TIME = 32'd4;   // LED切换触发时间
+parameter CLOCK_PERIOD = 32'd100000000;     // 时钟重置周期
+parameter LED_SWITCH_TIME = 32'd99999999;   // LED切换触发时间
 
 // 设备初始状态为 OFF
 reg [1:0] status = DEVICE_OFF;
