@@ -38,7 +38,7 @@ always @(posedge clk or negedge rst_n) begin
         status = DEVICE_PAUSE;
     end
 
-    // 关机状态下按button进入准备状态度
+    // 关机状态下按button进入准备状态
     else if (status == DEVICE_OFF) begin
         if (button) begin
             status = DEVICE_READY;
