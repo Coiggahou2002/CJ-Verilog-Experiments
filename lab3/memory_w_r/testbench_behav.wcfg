@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="7007083333fs"></ZoomStartTime>
+      <ZoomEndTime time="7592583334fs"></ZoomEndTime>
+      <Cursor1Time time="7395583000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/testbench/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/clk_g" type="logic">
+      <obj_property name="ElementShortName">clk_g</obj_property>
+      <obj_property name="ObjectShortName">clk_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_memory_top/u_memory_w_r/status" type="array">
+      <obj_property name="ElementShortName">status[1:0]</obj_property>
+      <obj_property name="ObjectShortName">status[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_memory_top/u_memory_w_r/enlighted_nums" type="array">
+      <obj_property name="ElementShortName">enlighted_nums[3:0]</obj_property>
+      <obj_property name="ObjectShortName">enlighted_nums[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/led" type="array">
+      <obj_property name="ElementShortName">led[15:0]</obj_property>
+      <obj_property name="ObjectShortName">led[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_memory_top/u_memory_w_r/light_status" type="array">
+      <obj_property name="ElementShortName">light_status[15:0]</obj_property>
+      <obj_property name="ObjectShortName">light_status[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_memory_top/u_led_mem/wea" type="array">
+      <obj_property name="ElementShortName">wea[0:0]</obj_property>
+      <obj_property name="ObjectShortName">wea[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_memory_top/u_led_mem/addra" type="array">
+      <obj_property name="ElementShortName">addra[3:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_memory_top/u_led_mem/dina" type="array">
+      <obj_property name="ElementShortName">dina[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dina[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_memory_top/u_memory_w_r/douta" type="array">
+      <obj_property name="ElementShortName">douta[15:0]</obj_property>
+      <obj_property name="ObjectShortName">douta[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/locked_ff" type="logic">
+      <obj_property name="ElementShortName">locked_ff</obj_property>
+      <obj_property name="ObjectShortName">locked_ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/cnt" type="array">
+      <obj_property name="ElementShortName">cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/wrong" type="logic">
+      <obj_property name="ElementShortName">wrong</obj_property>
+      <obj_property name="ObjectShortName">wrong</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/locked" type="logic">
+      <obj_property name="ElementShortName">locked</obj_property>
+      <obj_property name="ObjectShortName">locked</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/result" type="array">
+      <obj_property name="ElementShortName">result[15:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">result[15:0][15:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/mem_rd_ff" type="logic">
+      <obj_property name="ElementShortName">mem_rd_ff</obj_property>
+      <obj_property name="ObjectShortName">mem_rd_ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/mem_rd_addr" type="array">
+      <obj_property name="ElementShortName">mem_rd_addr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_rd_addr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/button_pos" type="logic">
+      <obj_property name="ElementShortName">button_pos</obj_property>
+      <obj_property name="ObjectShortName">button_pos</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/mem_rd" type="logic">
+      <obj_property name="ElementShortName">mem_rd</obj_property>
+      <obj_property name="ObjectShortName">mem_rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/cnt_end" type="logic">
+      <obj_property name="ElementShortName">cnt_end</obj_property>
+      <obj_property name="ObjectShortName">cnt_end</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/cnt_w" type="array">
+      <obj_property name="ElementShortName">cnt_w[3:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt_w[3:0]</obj_property>
+   </wvobject>
+</wave_config>

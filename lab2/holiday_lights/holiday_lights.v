@@ -11,23 +11,23 @@ reg [31:0] cnt;
 wire rst_n = ~rst;
 
 /**
- * è¡¨ç¤ºè®¾å¤‡çŠ¶æ€çš„å¸¸é‡
+ * ±íÊ¾Éè±¸×´???µÄ³£Á¿
  */
-parameter DEVICE_OFF = 2'b00;     // å…³æœºçŠ¶æ€
-parameter DEVICE_READY = 2'b01;   // å‡†å¤‡çŠ¶æ€
-parameter DEVICE_ON = 2'b10;      // è¿è¡ŒçŠ¶æ€
-parameter DEVICE_PAUSE = 2'b11;   // æš‚åœçŠ¶æ€
+parameter DEVICE_OFF = 2'b00;     // ¹Ø»ú×´???
+parameter DEVICE_READY = 2'b01;   // ×¼±¸×´???
+parameter DEVICE_ON = 2'b10;      // ÔËĞĞ×´???
+parameter DEVICE_PAUSE = 2'b11;   // ÔİÍ£×´???
 
 /**
- * æ—¶é’Ÿç›¸å…³çš„å¸¸é‡
+ * Ê±ÖÓÏà¹ØµÄ³£??
  */
-parameter CLOCK_PERIOD = 32'd100000000;     // æ—¶é’Ÿé‡ç½®å‘¨æœŸ
-parameter LED_SWITCH_TIME = 32'd99999999;   // LEDåˆ‡æ¢è§¦å‘æ—¶é—´
+parameter CLOCK_PERIOD = 32'd100000000;     // Ê±ÖÓÖØÖÃÖÜÆÚ
+parameter LED_SWITCH_TIME = 32'd99999999;   // LEDÇĞ»»´¥·¢Ê±¼ä
 
-// è®¾å¤‡åˆå§‹çŠ¶æ€ä¸º OFF
+// Éè±¸³õÊ¼×´???Îª OFF
 reg [1:0] status = DEVICE_OFF;
 
-// æ—¶é’Ÿæ§åˆ¶æ¡ä»¶è¡¨è¾¾å¼
+// Ê±ÖÓ¿ØÖÆÌõ¼ş±í´ï??
 wire cnt_end = (cnt == CLOCK_PERIOD);
 wire cnt_inc = (cnt != CLOCK_PERIOD && status == DEVICE_ON);
 
@@ -38,14 +38,14 @@ always @(posedge clk or negedge rst_n) begin
         status = DEVICE_PAUSE;
     end
 
-    // å…³æœºçŠ¶æ€ä¸‹æŒ‰buttonè¿›å…¥å‡†å¤‡çŠ¶æ€
+    // ¹Ø»ú×´???ÏÂ°´button½øÈë×¼±¸×´???
     else if (status == DEVICE_OFF) begin
         if (button) begin
             status = DEVICE_READY;
         end
     end
 
-    // å°†äº®ç¯ä½ç½®å’ŒæŒ‰é’®å¯¹åº”ï¼Œå‡†å¤‡å¥½åè‡ªåŠ¨åˆ‡æ¢åˆ°å¼€å§‹çŠ¶æ€
+    // ½«ÁÁµÆÎ»ÖÃºÍ°´Å¥¶ÔÓ¦£¬×¼±¸ºÃºó×Ô¶¯ÇĞ»»µ½??Ê¼×´??
     else if (status == DEVICE_READY) begin
         case (switch)
             3'b000: led = 16'b0000_0000_0000_0001;
@@ -60,7 +60,7 @@ always @(posedge clk or negedge rst_n) begin
         status = DEVICE_ON;
     end
 
-    // rsté”®æŒ‰ä¸‹åè¿›å…¥çš„æš‚åœçŠ¶æ€å®šä¹‰
+    // rst¼ü°´ÏÂºó½øÈëµÄÔİÍ£×´Ì¬¶¨??
     else if (status == DEVICE_PAUSE) begin
         case (switch)
             3'b000: led = 16'b0000_0000_0000_0001;
@@ -77,9 +77,9 @@ always @(posedge clk or negedge rst_n) begin
         end
     end
 
-    // è®¾å¤‡è¿è¡ŒçŠ¶æ€
+    // Éè±¸ÔËĞĞ×´???
     else if (status == DEVICE_ON) begin
-        // è¿è¡ŒçŠ¶æ€ä¸‹æŒ‰buttonï¼Œè¿›å…¥å‡†å¤‡çŠ¶æ€é‡ç½®ç¯çš„ä½ç½®å’Œæ•°é‡ï¼Œé‡æ–°å†æ¥
+        // ÔËĞĞ×´???ÏÂ°´button£¬½øÈë×¼±¸×´Ì¬ÖØÖÃµÆµÄÎ»ÖÃºÍÊıÁ¿£¬ÖØĞÂÔÙ??
         if (button) begin
             status = DEVICE_READY;
         end
@@ -89,7 +89,7 @@ always @(posedge clk or negedge rst_n) begin
     end
 end
 
-// æ—¶é’Ÿæ§åˆ¶å™¨
+// Ê±ÖÓ¿ØÖÆ??
 always @(posedge clk or negedge rst_n) begin
     if (~rst_n) cnt <= 32'd0;
     else if (cnt_end) cnt <= 32'd0;
