@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Wed Nov 17 20:01:23 2021
+| Date             : Wed Nov 24 14:06:15 2021
 | Host             : DESKTOP-5AR01AB running 64-bit major release  (build 9200)
 | Command          : report_power -file memory_top_power_routed.rpt -pb memory_top_power_summary_routed.pb -rpx memory_top_power_routed.rpx
 | Design           : memory_top
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.197        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.099        |
+| Dynamic (W)              | 0.100        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 2.7          |
 | Max Ambient (C)          | 84.5         |
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      149 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       44 |     63400 |            0.07 |
-|   Register     |    <0.001 |       88 |    126800 |            0.07 |
-|   CARRY4       |    <0.001 |        7 |     15850 |            0.04 |
+| Slice Logic    |    <0.001 |      198 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       74 |     63400 |            0.12 |
+|   CARRY4       |    <0.001 |       11 |     15850 |            0.07 |
+|   Register     |    <0.001 |      103 |    126800 |            0.08 |
 |   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |      129 |       --- |             --- |
+| Signals        |    <0.001 |      167 |       --- |             --- |
 | Block RAM      |    <0.001 |      0.5 |       135 |            0.37 |
 | PLL            |     0.097 |        1 |         6 |           16.67 |
 | I/O            |     0.002 |       19 |       285 |            6.67 |
@@ -144,7 +144,7 @@ Table of Contents
 +----------------------------------------------+-----------+
 | Name                                         | Power (W) |
 +----------------------------------------------+-----------+
-| memory_top                                   |     0.099 |
+| memory_top                                   |     0.100 |
 |   u_clk_div                                  |     0.097 |
 |     inst                                     |     0.097 |
 |   u_led_mem                                  |    <0.001 |

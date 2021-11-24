@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Nov 17 20:00:45 2021
+| Date         : Wed Nov 24 14:05:07 2021
 | Host         : DESKTOP-5AR01AB running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file memory_top_control_sets_placed.rpt
 | Design       : memory_top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     4 |
-| Unused register locations in slices containing registers |     8 |
+| Number of unique control sets                            |     9 |
+| Unused register locations in slices containing registers |    10 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,8 +34,8 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      4 |            1 |
-|    16+ |            3 |
+|      8 |            4 |
+|    16+ |            5 |
 +--------+--------------+
 
 
@@ -45,25 +45,30 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |               4 |            2 |
+| No           | No                    | No                     |               8 |            4 |
+| No           | No                    | Yes                    |               8 |            2 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             172 |           19 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              16 |            2 |
+| Yes          | No                    | Yes                    |              88 |           11 |
+| Yes          | Yes                   | No                     |              86 |           11 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------+-------------------------------+------------------+------------------+----------------+
-|       Clock Signal       |         Enable Signal         | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+--------------------------+-------------------------------+------------------+------------------+----------------+
-|  u_clk_div/inst/clk_out1 |                               | rst_IBUF         |                2 |              4 |
-|  u_clk_div/inst/clk_out1 | u_memory_w_r/led[15]_i_1_n_0  | rst_IBUF         |                5 |             32 |
-|  u_clk_div/inst/clk_out1 | u_memory_w_r/cnt[0]_i_1_n_0   | rst_IBUF         |                7 |             56 |
-|  u_clk_div/inst/clk_out1 | u_memory_w_r/addra[3]_i_1_n_0 | rst_IBUF         |                7 |             84 |
-+--------------------------+-------------------------------+------------------+------------------+----------------+
++--------------------------+---------------------------------------+---------------------------------------+------------------+----------------+
+|       Clock Signal       |             Enable Signal             |            Set/Reset Signal           | Slice Load Count | Bel Load Count |
++--------------------------+---------------------------------------+---------------------------------------+------------------+----------------+
+|  u_clk_div/inst/clk_out1 |                                       |                                       |                4 |              8 |
+|  u_clk_div/inst/clk_out1 |                                       | rst_IBUF                              |                2 |              8 |
+|  u_clk_div/inst/clk_out1 | u_memory_w_r/addra[3]_i_1_n_0         |                                       |                1 |              8 |
+|  u_clk_div/inst/clk_out1 | u_memory_w_r/written_nums[3]_i_1_n_0  |                                       |                1 |              8 |
+|  u_clk_div/inst/clk_out1 | u_memory_w_r/led[14]_i_2_n_0          | u_memory_w_r/led[14]_i_1_n_0          |                5 |             28 |
+|  u_clk_div/inst/clk_out1 | u_memory_w_r/light_status[14]_i_2_n_0 | u_memory_w_r/light_status[14]_i_1_n_0 |                3 |             28 |
+|  u_clk_div/inst/clk_out1 | u_memory_w_r/dina[15]_i_2_n_0         | u_memory_w_r/dina[15]_i_1_n_0         |                3 |             30 |
+|  u_clk_div/inst/clk_out1 | u_memory_w_r/write_cnt[0]_i_1_n_0     | rst_IBUF                              |                4 |             32 |
+|  u_clk_div/inst/clk_out1 | u_memory_w_r/read_cnt[0]_i_1_n_0      | rst_IBUF                              |                7 |             56 |
++--------------------------+---------------------------------------+---------------------------------------+------------------+----------------+
 
 
