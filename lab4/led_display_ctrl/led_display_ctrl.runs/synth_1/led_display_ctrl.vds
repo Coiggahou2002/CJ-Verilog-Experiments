@@ -1,0 +1,358 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Nov 25 12:09:08 2021
+# Process ID: 18104
+# Current directory: D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.runs/synth_1
+# Command line: vivado.exe -log led_display_ctrl.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source led_display_ctrl.tcl
+# Log file: D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.runs/synth_1/led_display_ctrl.vds
+# Journal file: D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source led_display_ctrl.tcl -notrace
+Command: synth_design -top led_display_ctrl -part xc7a100tfgg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15524 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 358.301 ; gain = 98.586
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'led_display_ctrl' [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.srcs/sources_1/new/led_display_ctrl.v:1]
+	Parameter DEVICE_OFF bound to: 0 - type: integer 
+	Parameter DEVICE_RUN bound to: 1 - type: integer 
+	Parameter ALL_TUBE_OFF bound to: 8'b11111111 
+	Parameter CLOCK_PERIOD bound to: 37'b0000001000001100100001010101100000000 
+	Parameter TRIG_10_SECOND bound to: 37'b0000000000000000000000000000001100100 
+	Parameter TRIG_9_SECOND bound to: 37'b0000000000101111101011110000100000000 
+	Parameter TRIG_8_SECOND bound to: 37'b0000000001011111010111100001000000000 
+	Parameter TRIG_7_SECOND bound to: 37'b0000000010001111000011010001100000000 
+	Parameter TRIG_6_SECOND bound to: 37'b0000000010111110101111000010000000000 
+	Parameter TRIG_5_SECOND bound to: 37'b0000000011101110011010110010100000000 
+	Parameter TRIG_4_SECOND bound to: 37'b0000000100011110000110100011000000000 
+	Parameter TRIG_3_SECOND bound to: 37'b0000000101001101110010010011100000000 
+	Parameter TRIG_2_SECOND bound to: 37'b0000000101111101011110000100000000000 
+	Parameter TRIG_1_SECOND bound to: 37'b0000000110101101001001110100100000000 
+	Parameter TRIG_0_SECOND bound to: 37'b0000000111011100110101100101000000000 
+	Parameter SLICE_PERIOD bound to: 21'b110000110101000000000 
+	Parameter DIG_0_TRIG bound to: 21'b110000110101000000000 
+	Parameter DIG_1_TRIG bound to: 21'b000110000110101000000 
+	Parameter DIG_2_TRIG bound to: 21'b001100001101010000000 
+	Parameter DIG_3_TRIG bound to: 21'b010010010011111000000 
+	Parameter DIG_4_TRIG bound to: 21'b011000011010100000000 
+	Parameter DIG_5_TRIG bound to: 21'b011110100001001000000 
+	Parameter DIG_6_TRIG bound to: 21'b100100100111110000000 
+	Parameter DIG_7_TRIG bound to: 21'b101010101110011000000 
+	Parameter NUMBER_0 bound to: 7'b0000001 
+	Parameter NUMBER_1 bound to: 7'b1001111 
+	Parameter NUMBER_2 bound to: 7'b0010010 
+	Parameter NUMBER_3 bound to: 7'b0000110 
+	Parameter NUMBER_4 bound to: 7'b1001100 
+	Parameter NUMBER_5 bound to: 7'b0100100 
+	Parameter NUMBER_6 bound to: 7'b0100000 
+	Parameter NUMBER_7 bound to: 7'b0001111 
+	Parameter NUMBER_8 bound to: 7'b0000000 
+	Parameter NUMBER_9 bound to: 7'b0001100 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.srcs/sources_1/new/led_display_ctrl.v:116]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.srcs/sources_1/new/led_display_ctrl.v:184]
+WARNING: [Synth 8-5788] Register led_ca_reg in module led_display_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.srcs/sources_1/new/led_display_ctrl.v:171]
+WARNING: [Synth 8-5788] Register led_cb_reg in module led_display_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.srcs/sources_1/new/led_display_ctrl.v:172]
+WARNING: [Synth 8-5788] Register led_cc_reg in module led_display_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.srcs/sources_1/new/led_display_ctrl.v:173]
+WARNING: [Synth 8-5788] Register led_cd_reg in module led_display_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.srcs/sources_1/new/led_display_ctrl.v:174]
+WARNING: [Synth 8-5788] Register led_ce_reg in module led_display_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.srcs/sources_1/new/led_display_ctrl.v:175]
+WARNING: [Synth 8-5788] Register led_cf_reg in module led_display_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.srcs/sources_1/new/led_display_ctrl.v:176]
+WARNING: [Synth 8-5788] Register led_cg_reg in module led_display_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.srcs/sources_1/new/led_display_ctrl.v:177]
+WARNING: [Synth 8-5788] Register tube_en_status_reg in module led_display_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.srcs/sources_1/new/led_display_ctrl.v:180]
+WARNING: [Synth 8-5788] Register led_en_reg in module led_display_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.srcs/sources_1/new/led_display_ctrl.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'led_display_ctrl' (1#1) [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.srcs/sources_1/new/led_display_ctrl.v:1]
+WARNING: [Synth 8-3917] design led_display_ctrl has port led_dp driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 413.523 ; gain = 153.809
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 413.523 ; gain = 153.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 413.523 ; gain = 153.809
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/clock.xdc]
+Finished Parsing XDC File [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/clock.xdc]
+Parsing XDC File [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/pin.xdc]
+Finished Parsing XDC File [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/pin.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/pin.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_display_ctrl_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/led_display_ctrl_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 769.082 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 769.082 ; gain = 509.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 769.082 ; gain = 509.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 769.082 ; gain = 509.367
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "current_dig_6" won't be mapped to RAM because address size (37) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "led_ca" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 769.082 ; gain = 509.367
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	  12 Input      7 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   9 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module led_display_ctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	  12 Input      7 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   9 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "led_ca" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "current_dig_6" won't be mapped to RAM because address size (30) is larger than maximum supported(25)
+WARNING: [Synth 8-3917] design led_display_ctrl has port led_dp driven by constant 1
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\current_dig_7_reg[0] )
+INFO: [Synth 8-3886] merging instance 'current_dig_7_reg[1]' (FDCE) to 'current_dig_7_reg[6]'
+INFO: [Synth 8-3886] merging instance 'current_dig_7_reg[2]' (FDCE) to 'current_dig_7_reg[6]'
+INFO: [Synth 8-3886] merging instance 'current_dig_7_reg[3]' (FDCE) to 'current_dig_7_reg[6]'
+INFO: [Synth 8-3886] merging instance 'current_dig_7_reg[4]' (FDCE) to 'current_dig_7_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\current_dig_7_reg[5] )
+WARNING: [Synth 8-3332] Sequential element (current_dig_7_reg[5]) is unused and will be removed from module led_display_ctrl.
+WARNING: [Synth 8-3332] Sequential element (current_dig_7_reg[0]) is unused and will be removed from module led_display_ctrl.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 769.082 ; gain = 509.367
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 769.082 ; gain = 509.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 784.926 ; gain = 525.211
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 788.344 ; gain = 528.629
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 788.344 ; gain = 528.629
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 788.344 ; gain = 528.629
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 788.344 ; gain = 528.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 788.344 ; gain = 528.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 788.344 ; gain = 528.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 788.344 ; gain = 528.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    16|
+|3     |LUT1   |     2|
+|4     |LUT2   |    15|
+|5     |LUT3   |    10|
+|6     |LUT4   |    12|
+|7     |LUT5   |    24|
+|8     |LUT6   |    43|
+|9     |MUXF7  |     2|
+|10    |FDCE   |    66|
+|11    |FDPE   |     1|
+|12    |FDRE   |    16|
+|13    |FDSE   |     7|
+|14    |IBUF   |     3|
+|15    |OBUF   |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   234|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 788.344 ; gain = 528.629
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 788.344 ; gain = 173.070
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 788.344 ; gain = 528.629
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 788.344 ; gain = 541.434
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.runs/synth_1/led_display_ctrl.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file led_display_ctrl_utilization_synth.rpt -pb led_display_ctrl_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 788.344 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 25 12:09:45 2021...
