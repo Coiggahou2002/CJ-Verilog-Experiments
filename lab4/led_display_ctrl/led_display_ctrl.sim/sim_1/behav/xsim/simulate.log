@@ -20,8 +20,3 @@ index 0000fffe finished
 Test end!
 ----PASS!!!
 $finish called at time : 1310755 ns : File "D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/testbench.v" Line 97
-index 0000fffe finished
-====================================
-Test end!
-----PASS!!!
-$finish called at time : 1966125 ns : File "D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/testbench.v" Line 97

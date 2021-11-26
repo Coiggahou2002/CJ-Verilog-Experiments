@@ -24,32 +24,32 @@ wire rst_n = ~rst;
 assign led_dp = 1;
 
 // Counter for 10 to 0 (For Simulation)
-//parameter CLOCK_PERIOD = 37'd27500;
-//parameter TRIG_10_SECOND = 37'd0;
-//parameter TRIG_9_SECOND = 37'd2500;
-//parameter TRIG_8_SECOND = 37'd5000;
-//parameter TRIG_7_SECOND = 37'd7500;
-//parameter TRIG_6_SECOND = 37'd10000;
-//parameter TRIG_5_SECOND = 37'd12500;
-//parameter TRIG_4_SECOND = 37'd15000;
-//parameter TRIG_3_SECOND = 37'd17500;
-//parameter TRIG_2_SECOND = 37'd20000;
-//parameter TRIG_1_SECOND = 37'd22500;
-//parameter TRIG_0_SECOND = 37'd25000;
+parameter CLOCK_PERIOD = 37'd27500;
+parameter TRIG_10_SECOND = 37'd0;
+parameter TRIG_9_SECOND = 37'd2500;
+parameter TRIG_8_SECOND = 37'd5000;
+parameter TRIG_7_SECOND = 37'd7500;
+parameter TRIG_6_SECOND = 37'd10000;
+parameter TRIG_5_SECOND = 37'd12500;
+parameter TRIG_4_SECOND = 37'd15000;
+parameter TRIG_3_SECOND = 37'd17500;
+parameter TRIG_2_SECOND = 37'd20000;
+parameter TRIG_1_SECOND = 37'd22500;
+parameter TRIG_0_SECOND = 37'd25000;
 
 // Counter for 10 to 0 (For Real Device)
-parameter CLOCK_PERIOD = 37'd1100000000;
-parameter TRIG_10_SECOND = 37'd100;
-parameter TRIG_9_SECOND = 37'd100000000;
-parameter TRIG_8_SECOND = 37'd200000000;
-parameter TRIG_7_SECOND = 37'd300000000;
-parameter TRIG_6_SECOND = 37'd400000000;
-parameter TRIG_5_SECOND = 37'd500000000;
-parameter TRIG_4_SECOND = 37'd600000000;
-parameter TRIG_3_SECOND = 37'd700000000;
-parameter TRIG_2_SECOND = 37'd800000000;
-parameter TRIG_1_SECOND = 37'd900000000;
-parameter TRIG_0_SECOND = 37'd1000000000;
+// parameter CLOCK_PERIOD = 37'd1100000000;
+// parameter TRIG_10_SECOND = 37'd100;
+// parameter TRIG_9_SECOND = 37'd100000000;
+// parameter TRIG_8_SECOND = 37'd200000000;
+// parameter TRIG_7_SECOND = 37'd300000000;
+// parameter TRIG_6_SECOND = 37'd400000000;
+// parameter TRIG_5_SECOND = 37'd500000000;
+// parameter TRIG_4_SECOND = 37'd600000000;
+// parameter TRIG_3_SECOND = 37'd700000000;
+// parameter TRIG_2_SECOND = 37'd800000000;
+// parameter TRIG_1_SECOND = 37'd900000000;
+// parameter TRIG_0_SECOND = 37'd1000000000;
 
 
 reg [36:0] ten_cnt;
@@ -62,26 +62,26 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 // Counter for 5 clk periods (For Simulation)
-//parameter SLICE_PERIOD = 21'd40;
-//parameter DIG_0_TRIG = 21'd40;
-//parameter DIG_1_TRIG = 21'd5;
-//parameter DIG_2_TRIG = 21'd10;
-//parameter DIG_3_TRIG = 21'd15;
-//parameter DIG_4_TRIG = 21'd20;
-//parameter DIG_5_TRIG = 21'd25;
-//parameter DIG_6_TRIG = 21'd30;
-//parameter DIG_7_TRIG = 21'd35;
+parameter SLICE_PERIOD = 21'd40;
+parameter DIG_0_TRIG = 21'd40;
+parameter DIG_1_TRIG = 21'd5;
+parameter DIG_2_TRIG = 21'd10;
+parameter DIG_3_TRIG = 21'd15;
+parameter DIG_4_TRIG = 21'd20;
+parameter DIG_5_TRIG = 21'd25;
+parameter DIG_6_TRIG = 21'd30;
+parameter DIG_7_TRIG = 21'd35;
 
 // Counter for 2ms (For Real Device)
-parameter SLICE_PERIOD = 21'd1600000;
-parameter DIG_0_TRIG = 21'd1600000;
-parameter DIG_1_TRIG = 21'd200000;
-parameter DIG_2_TRIG = 21'd400000;
-parameter DIG_3_TRIG = 21'd600000;
-parameter DIG_4_TRIG = 21'd800000;
-parameter DIG_5_TRIG = 21'd1000000;
-parameter DIG_6_TRIG = 21'd1200000;
-parameter DIG_7_TRIG = 21'd1400000;
+// parameter SLICE_PERIOD = 21'd1600000;
+// parameter DIG_0_TRIG = 21'd1600000;
+// parameter DIG_1_TRIG = 21'd200000;
+// parameter DIG_2_TRIG = 21'd400000;
+// parameter DIG_3_TRIG = 21'd600000;
+// parameter DIG_4_TRIG = 21'd800000;
+// parameter DIG_5_TRIG = 21'd1000000;
+// parameter DIG_6_TRIG = 21'd1200000;
+// parameter DIG_7_TRIG = 21'd1400000;
 reg [20:0] slice_cnt;
 wire slice_cnt_inc = (slice_cnt != SLICE_PERIOD && status == DEVICE_RUN);
 wire slice_cnt_end = (slice_cnt == SLICE_PERIOD);

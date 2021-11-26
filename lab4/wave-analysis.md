@@ -1,59 +1,82 @@
-# 数字逻辑实验三 | 波形分析
+# 数字逻辑实验四 | 波形分析
 
 > 200110617 蔡嘉豪
 
 ## 一、概述
 
-题目要求使用时钟 IP 和存储器 IP 实现 16 位 LED 灯从右往左依次点亮，直到全亮，按复位键全灭，再次按启动键，重复上述过程.
-
-存储器 IP 名为 `led_mem`，负责存储深度 16、宽度 16 的数据（16 个地址对应灯的 16 个状态，每个状态有 16 个灯的电平高低描述，为 16 bits 长度的二进制串）
-
-时钟 IP 分频为 10 MHz，也就是说导出的时钟 `clk_g` 是频率为 10 MHz 的时钟
+本实验要求能够控制 8 个数码管同时稳定地显示数字，其中 DK0-DK5 显示固定的静态数字，DK7-DK6 循环显示十秒倒计时.
 
 ## 二、总思路
 
-先一次性写入 16 个 16 bits 的二进制串，再逐秒读出赋值给 `led`
+使用一个能容纳 0 到 16 毫秒的计数器 `slice_cnt`，每隔 2 ms 给出信号，控制 8 个数码管的是使能信号转移及为其共用的触发信号赋值（其中 DK7-DK6 的触发信号由寄存器变量 `current_dig_6` 和 `current_dig_7` 持久化，每隔 1 s 触发其变化）
+
+使用一个能容纳 0 到 10 秒的计数器 `ten_cnt`，负责在循环十秒倒数的过程中，每隔 1 s 给出信号，控制数码管触发信号的动态改变
 
 ## 三、状态定义和转换
 
-定义 4 种状态，分别为复位、待机、写数据、读数据
-
-按复位键进入复位状态，完成状态初始化后，进入待机状态
-
-待机状态按启动键进入写状态
+设备状态：
 
 ```verilog
-reg [2:0] status;
-parameter DEVICE_RESET = 3'b000;
-parameter DEVICE_NOT_WORK = 3'b001;
-parameter DEVICE_WRITE = 3'b010;
-parameter DEVICE_READ = 3'b011;
+reg status；
+parameter DEVICE_OFF = 0; // 关机或复位
+parameter DEVICE_RUN = 1; // 运行
 ```
 
-## 四、写数据
+数码管触发信号状态常量：
 
-定义了一个计数器 `write_cnt`，用于每 2 个时钟周期给出写信号
+```verilog
+parameter NUMBER_0 = 7'b0000001;
+parameter NUMBER_1 = 7'b1001111;
+parameter NUMBER_2 = 7'b0010010;
+parameter NUMBER_3 = 7'b0000110;
+parameter NUMBER_4 = 7'b1001100;
+parameter NUMBER_5 = 7'b0100100;
+parameter NUMBER_6 = 7'b0100000;
+parameter NUMBER_7 = 7'b0001111;
+parameter NUMBER_8 = 7'b0000000;
+parameter NUMBER_9 = 7'b0001100;
+```
 
-即每 2 个时钟周期写入一个灯的状态数据
+十秒倒计时时钟触发时机：
 
-## 五、读数据
+```verilog
+// Counter for 10 to 0 (For Real Device)
+parameter CLOCK_PERIOD = 37'd1100000000;
+parameter TRIG_10_SECOND = 37'd100;
+parameter TRIG_9_SECOND = 37'd100000000;
+parameter TRIG_8_SECOND = 37'd200000000;
+parameter TRIG_7_SECOND = 37'd300000000;
+parameter TRIG_6_SECOND = 37'd400000000;
+parameter TRIG_5_SECOND = 37'd500000000;
+parameter TRIG_4_SECOND = 37'd600000000;
+parameter TRIG_3_SECOND = 37'd700000000;
+parameter TRIG_2_SECOND = 37'd800000000;
+parameter TRIG_1_SECOND = 37'd900000000;
+parameter TRIG_0_SECOND = 37'd1000000000;
+```
 
-定义计数器 `read_cnt`，每隔 1 秒给出读信号，改变 `addra` 并将 `douta` 中数据赋值给 `led`
+数码管快速切换使能触发时机（2 ms）：
+```verilog
+// Counter for 2ms (For Real Device)
+parameter SLICE_PERIOD = 21'd1600000;
+parameter DIG_0_TRIG = 21'd1600000;
+parameter DIG_1_TRIG = 21'd200000;
+parameter DIG_2_TRIG = 21'd400000;
+parameter DIG_3_TRIG = 21'd600000;
+parameter DIG_4_TRIG = 21'd800000;
+parameter DIG_5_TRIG = 21'd1000000;
+parameter DIG_6_TRIG = 21'd1200000;
+parameter DIG_7_TRIG = 21'd1400000;
+```
 
-最后一个灯稍微做一些特判即可
+## 四、波形分析
 
-## 六、波形分析
+![](./led_display_ctrl/wave.PNG)
 
-![](./memory_w_r/wave.PNG)
+此处仿真中设置的数码管使能切换间隔为 5 个时钟周期，十秒倒计时中每 1 s 换成 2500 个时钟周期
 
-此处仿真中给出读信号的周期为 15 个时钟周期
+从图中可见，数码管的使能信号低电平快速地逐位转移，超过了人眼的刷新频率，形成视觉暂留效果，人眼看上去就是 8 个数码管同时稳定显示数字
 
-### 1.时钟
+LED 使能信号位在 0-5 时，可以看到对应的触发信号都是一样的，因为 DK0-DK5 一直显示的是固定的数字
 
-从图中可见，`clk_g` 与原时钟 `clk` 相比实现了无毛刺分频
-
-### 2.读写分析
-
-从图中可见，约 6.5 ns 到 11.4 ns，`status` 为 `DEVICE_WRITE` 为写数据状态，此阶段中存储器写信号 `wea` 一直拉高，但存储器使能信号 `ena` 只在需要写数据的时刻拉高（保证其不持续工作，降低能耗），经过该阶段，`addra` 从 0 到 15 都已经写入对应的数据
-
-从 11.4 ns 之后 `status` 为 `DEVICE_READ` 为读数据状态，此阶段中，写信号 `wea` 一直为 0，存储器使能信号 `ena` 只在需要读数据的那一刻拉高，并且该阶段中，`led` 与 `douta` 保持同步，即亮灯的状态与读出的数据时刻保持一致
+LED 使能信号在 6-7 时，每隔 2500 个时钟周期，DK6 会改变一次，而 DK7 每隔 25000 个时钟周期就改变 2 次，因为 DK 7 只在 `0` 和 `1` 之间转换
