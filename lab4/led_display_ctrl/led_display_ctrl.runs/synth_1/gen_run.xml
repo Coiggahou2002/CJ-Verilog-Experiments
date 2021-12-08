@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1637813344">
+<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1638943446">
   <File Type="PA-TCL" Name="led_display_ctrl.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="led_display_ctrl_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="led_display_ctrl_reports.tcl"/>
   <File Type="RDS-RDS" Name="led_display_ctrl.vds"/>
   <File Type="RDS-UTIL" Name="led_display_ctrl_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="led_display_ctrl_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="led_display_ctrl.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="led_display_ctrl_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="led_display_ctrl_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/led_display_ctrl.v">

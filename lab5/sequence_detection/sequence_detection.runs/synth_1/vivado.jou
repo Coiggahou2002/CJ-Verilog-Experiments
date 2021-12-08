@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Dec  8 15:40:51 2021
+# Process ID: 15100
+# Current directory: D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab5/sequence_detection/sequence_detection.runs/synth_1
+# Command line: vivado.exe -log sequence_detection.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sequence_detection.tcl
+# Log file: D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab5/sequence_detection/sequence_detection.runs/synth_1/sequence_detection.vds
+# Journal file: D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab5/sequence_detection/sequence_detection.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source sequence_detection.tcl -notrace

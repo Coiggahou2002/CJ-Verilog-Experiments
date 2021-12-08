@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Nov 25 12:09:08 2021
-# Process ID: 18104
+# Start of session at: Wed Dec  8 14:04:10 2021
+# Process ID: 23412
 # Current directory: D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.runs/synth_1
 # Command line: vivado.exe -log led_display_ctrl.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source led_display_ctrl.tcl
 # Log file: D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab4/led_display_ctrl/led_display_ctrl.runs/synth_1/led_display_ctrl.vds
