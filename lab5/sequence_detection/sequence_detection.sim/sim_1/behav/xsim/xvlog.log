@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab5/sequence_detection/sequence_detection.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sequence_detection
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CJ-Documents/User Desktop of Windows/CJ-Verilog-Experiments/lab5/sequence_detection/testbench.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module testbench
