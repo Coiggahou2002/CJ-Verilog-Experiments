@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/calculator_hex/pin.xdc rfile:../../../pin.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/pin.xdc rfile:../../../pin.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y18 [get_ports clk]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]

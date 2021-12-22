@@ -24,22 +24,22 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/calculator_hex/calculator_hex.cache/wt [current_project]
-set_property parent.project_path D:/calculator_hex/calculator_hex.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.cache/wt [current_project]
+set_property parent.project_path C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/calculator_hex/calculator_hex.cache/ip [current_project]
+set_property ip_output_repo c:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  D:/calculator_hex/calculator_display.v
-  D:/calculator_hex/calculator_hex.v
-  D:/calculator_hex/calculator_top.v
+  C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_display.v
+  C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.v
+  C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_top.v
 }
-read_ip -quiet D:/calculator_hex/calculator_hex.srcs/sources_1/ip/clk_div/clk_div.xci
-set_property used_in_implementation false [get_files -all d:/calculator_hex/calculator_hex.srcs/sources_1/ip/clk_div/clk_div_board.xdc]
-set_property used_in_implementation false [get_files -all d:/calculator_hex/calculator_hex.srcs/sources_1/ip/clk_div/clk_div.xdc]
-set_property used_in_implementation false [get_files -all d:/calculator_hex/calculator_hex.srcs/sources_1/ip/clk_div/clk_div_ooc.xdc]
+read_ip -quiet C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.srcs/sources_1/ip/clk_div/clk_div.xci
+set_property used_in_implementation false [get_files -all c:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.srcs/sources_1/ip/clk_div/clk_div_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.srcs/sources_1/ip/clk_div/clk_div.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.srcs/sources_1/ip/clk_div/clk_div_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -49,13 +49,13 @@ set_property used_in_implementation false [get_files -all d:/calculator_hex/calc
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/calculator_hex/clock.xdc
-set_property used_in_implementation false [get_files D:/calculator_hex/clock.xdc]
+read_xdc C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/clock.xdc
+set_property used_in_implementation false [get_files C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/clock.xdc]
 
-read_xdc D:/calculator_hex/pin.xdc
-set_property used_in_implementation false [get_files D:/calculator_hex/pin.xdc]
+read_xdc C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/pin.xdc
+set_property used_in_implementation false [get_files C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/pin.xdc]
 
-set_param ips.enableIPCacheLiteLoad 0
+set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 synth_design -top calculator_top -part xc7a100tfgg484-1

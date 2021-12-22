@@ -67,7 +67,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   set_param xicom.use_bs_reader 1
   open_checkpoint calculator_top_routed.dcp
-  set_property webtalk.parent_dir D:/calculator_hex/calculator_hex.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.cache/wt [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
   catch { write_mem_info -force calculator_top.mmi }
   write_bitstream -force calculator_top.bit 

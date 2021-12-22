@@ -48,7 +48,7 @@ always @(posedge clk or negedge rst_n) begin
             status = ENABLED;
         end
     end
-    else if (status == ENABLED) begin
+    else if (status == ENABLED && button == 1'b0) begin
         case (cur_operator)
             PLUS: begin
                 if (cal_tmp == NO_TMP) begin

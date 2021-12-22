@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Dec 18 20:23:30 2021
-| Host             : DESKTOP-5AR01AB running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date             : Wed Dec 22 11:55:50 2021
+| Host             : PA01 running 64-bit major release  (build 9200)
 | Command          : report_power -file calculator_top_power_routed.rpt -pb calculator_top_power_summary_routed.pb -rpx calculator_top_power_routed.rpx
 | Design           : calculator_top
 | Device           : xc7a100tfgg484-1
@@ -53,12 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |     1694 |       --- |             --- |
-|   LUT as Logic |    <0.001 |     1161 |     63400 |            1.83 |
+| Slice Logic    |    <0.001 |     1627 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     1127 |     63400 |            1.78 |
 |   CARRY4       |    <0.001 |      277 |     15850 |            1.75 |
+|   F7/F8 Muxes  |    <0.001 |        9 |     63400 |            0.01 |
 |   Register     |    <0.001 |      110 |    126800 |            0.09 |
 |   Others       |     0.000 |       11 |       --- |             --- |
-| Signals        |    <0.001 |     1703 |       --- |             --- |
+| Signals        |    <0.001 |     1644 |       --- |             --- |
 | PLL            |     0.097 |        1 |         6 |           16.67 |
 | DSPs           |    <0.001 |        5 |       240 |            2.08 |
 | I/O            |    <0.001 |       38 |       285 |           13.33 |
@@ -141,14 +142,13 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------------------+-----------+
-| Name                   | Power (W) |
-+------------------------+-----------+
-| calculator_top         |     0.100 |
-|   u_calculator_display |    <0.001 |
-|   u_calculator_hex     |     0.002 |
-|   u_clk_div            |     0.097 |
-|     inst               |     0.097 |
-+------------------------+-----------+
++--------------------+-----------+
+| Name               | Power (W) |
++--------------------+-----------+
+| calculator_top     |     0.100 |
+|   u_calculator_hex |     0.002 |
+|   u_clk_div        |     0.097 |
+|     inst           |     0.097 |
++--------------------+-----------+
 
 
