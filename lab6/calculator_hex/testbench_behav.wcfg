@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="5299870300fs"></ZoomStartTime>
-      <ZoomEndTime time="19214025940fs"></ZoomEndTime>
-      <Cursor1Time time="16895000000fs"></Cursor1Time>
+      <ZoomStartTime time="7045046050fs"></ZoomStartTime>
+      <ZoomEndTime time="17955046051fs"></ZoomEndTime>
+      <Cursor1Time time="11740063000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="114"></ValueColumnWidth>
+      <ValueColumnWidth column_width="110"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="35" />
+   <WVObjectSize size="30" />
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -48,75 +48,11 @@
       <obj_property name="ElementShortName">cur_operator[2:0]</obj_property>
       <obj_property name="ObjectShortName">cur_operator[2:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/testbench/u_calculator_top/u_calculator_hex/cal_tmp" type="array">
+      <obj_property name="ElementShortName">cal_tmp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cal_tmp[31:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/testbench/u_calculator_top/u_calculator_hex/cal_result" type="array">
-      <obj_property name="ElementShortName">cal_result[31:0]</obj_property>
-      <obj_property name="ObjectShortName">cal_result[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/button_cnt" type="array">
-      <obj_property name="ElementShortName">button_cnt[3:0]</obj_property>
-      <obj_property name="ObjectShortName">button_cnt[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/cnt" type="array">
-      <obj_property name="ElementShortName">cnt[3:0]</obj_property>
-      <obj_property name="ObjectShortName">cnt[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/check_cnt" type="array">
-      <obj_property name="ElementShortName">check_cnt[7:0]</obj_property>
-      <obj_property name="ObjectShortName">check_cnt[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/wrong" type="logic">
-      <obj_property name="ElementShortName">wrong</obj_property>
-      <obj_property name="ObjectShortName">wrong</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/result" type="array">
-      <obj_property name="ElementShortName">result[7:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">result[7:0][31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/clk_g" type="logic">
-      <obj_property name="ElementShortName">clk_g</obj_property>
-      <obj_property name="ObjectShortName">clk_g</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/locked" type="logic">
-      <obj_property name="ElementShortName">locked</obj_property>
-      <obj_property name="ObjectShortName">locked</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/rst" type="logic">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/button_cnt_end" type="logic">
-      <obj_property name="ElementShortName">button_cnt_end</obj_property>
-      <obj_property name="ObjectShortName">button_cnt_end</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/button_pos" type="logic">
-      <obj_property name="ElementShortName">button_pos</obj_property>
-      <obj_property name="ObjectShortName">button_pos</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/button_pos_delay" type="logic">
-      <obj_property name="ElementShortName">button_pos_delay</obj_property>
-      <obj_property name="ObjectShortName">button_pos_delay</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/cnt_end" type="logic">
-      <obj_property name="ElementShortName">cnt_end</obj_property>
-      <obj_property name="ObjectShortName">cnt_end</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/i" type="array">
-      <obj_property name="ElementShortName">i[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/cnt_w" type="array">
-      <obj_property name="ElementShortName">cnt_w[3:0]</obj_property>
-      <obj_property name="ObjectShortName">cnt_w[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_calculator_top/u_calculator_display/tube_en_status" type="array">
-      <obj_property name="ElementShortName">tube_en_status[7:0]</obj_property>
-      <obj_property name="ObjectShortName">tube_en_status[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_calculator_top/u_calculator_display/binary2hex" type="array">
-      <obj_property name="ElementShortName">binary2hex[15:0][6:0]</obj_property>
-      <obj_property name="ObjectShortName">binary2hex[15:0][6:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/u_calculator_top/u_calculator_display/cal_result" type="array">
       <obj_property name="ElementShortName">cal_result[31:0]</obj_property>
       <obj_property name="ObjectShortName">cal_result[31:0]</obj_property>
    </wvobject>
@@ -156,8 +92,52 @@
       <obj_property name="ElementShortName">led_dp</obj_property>
       <obj_property name="ObjectShortName">led_dp</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/u_calculator_top/u_calculator_hex/cal_tmp" type="array">
-      <obj_property name="ElementShortName">cal_tmp[31:0]</obj_property>
-      <obj_property name="ObjectShortName">cal_tmp[31:0]</obj_property>
+   <wvobject fp_name="/testbench/cnt" type="array">
+      <obj_property name="ElementShortName">cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/check_cnt" type="array">
+      <obj_property name="ElementShortName">check_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">check_cnt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/wrong" type="logic">
+      <obj_property name="ElementShortName">wrong</obj_property>
+      <obj_property name="ObjectShortName">wrong</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/result" type="array">
+      <obj_property name="ElementShortName">result[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/clk_g" type="logic">
+      <obj_property name="ElementShortName">clk_g</obj_property>
+      <obj_property name="ObjectShortName">clk_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/button_cnt_end" type="logic">
+      <obj_property name="ElementShortName">button_cnt_end</obj_property>
+      <obj_property name="ObjectShortName">button_cnt_end</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/button_pos" type="logic">
+      <obj_property name="ElementShortName">button_pos</obj_property>
+      <obj_property name="ObjectShortName">button_pos</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/button_pos_delay" type="logic">
+      <obj_property name="ElementShortName">button_pos_delay</obj_property>
+      <obj_property name="ObjectShortName">button_pos_delay</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/cnt_w" type="array">
+      <obj_property name="ElementShortName">cnt_w[3:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt_w[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_calculator_top/u_calculator_display/tube_en_status" type="array">
+      <obj_property name="ElementShortName">tube_en_status[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tube_en_status[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/button_cnt" type="array">
+      <obj_property name="ElementShortName">button_cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">button_cnt[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/u_calculator_top/u_calculator_display/binary2hex" type="array">
+      <obj_property name="ElementShortName">binary2hex[15:0][6:0]</obj_property>
+      <obj_property name="ObjectShortName">binary2hex[15:0][6:0]</obj_property>
    </wvobject>
 </wave_config>

@@ -2,16 +2,15 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Dec 22 11:45:26 2021
-# Process ID: 10548
+# Start of session at: Wed Dec 22 14:00:55 2021
+# Process ID: 10820
 # Current directory: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11160 C:\Users\Administrator\Desktop\CJ-Verilog-Experiments\lab6\calculator_hex\calculator_hex.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10548 C:\Users\Administrator\Desktop\CJ-Verilog-Experiments\lab6\calculator_hex\calculator_hex.xpr
 # Log file: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/vivado.log
 # Journal file: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.xpr
-INFO: [Project 1-313] Project file moved from 'D:/calculator_hex' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -20,8 +19,32 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/dat
 WARNING: [IP_Flow 19-2162] IP 'clk_div' is locked:
 * IP definition 'Clocking Wizard (6.0)' for IP 'clk_div' (customized with software release 2018.2) has a different revision in the IP Catalog.
 Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-INFO: [Project 1-230] Project 'calculator_hex.xpr' upgraded for this version of Vivado.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 856.051 ; gain = 213.508
 update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.runs/impl_1/calculator_top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.runs/impl_1/calculator_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 launch_simulation
 INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.sim/sim_1/behav/xsim'
@@ -82,14 +105,111 @@ Compiling module xil_defaultlib.calculator_top
 Compiling module xil_defaultlib.testbench
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot testbench_behav
-
-****** Webtalk v2018.3 (64-bit)
-  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
-  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-source C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Wed Dec 22 11:47:03 2021...
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1s
+index 6 finished
+====================================
+Test end!
+----PASS!!!
+$finish called at time : 16895 ns : File "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v" Line 139
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1s
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1916.824 ; gain = 17.434
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_display.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_display.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_display.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_top.v:]
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.srcs/sources_1/ip/clk_div/clk_div_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_div_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.srcs/sources_1/ip/clk_div/clk_div.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_div
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_hex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [VRFC 10-2458] undeclared symbol led_en, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:163]
+INFO: [VRFC 10-2458] undeclared symbol led_ca, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:164]
+INFO: [VRFC 10-2458] undeclared symbol led_cb, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:165]
+INFO: [VRFC 10-2458] undeclared symbol led_cc, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:166]
+INFO: [VRFC 10-2458] undeclared symbol led_cd, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:167]
+INFO: [VRFC 10-2458] undeclared symbol led_ce, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:168]
+INFO: [VRFC 10-2458] undeclared symbol led_cf, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:169]
+INFO: [VRFC 10-2458] undeclared symbol led_cg, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:170]
+INFO: [VRFC 10-2458] undeclared symbol led_dp, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:171]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto bb3654c0b45d4922bab51fd229682c61 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'led_en' [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:163]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=41,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_div_clk_wiz
+Compiling module xil_defaultlib.clk_div
+Compiling module xil_defaultlib.calculator_hex
+Compiling module xil_defaultlib.calculator_display
+Compiling module xil_defaultlib.calculator_top
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.sim/sim_1/behav/xsim'
@@ -117,61 +237,97 @@ Test end!
 $finish called at time : 16895 ns : File "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v" Line 139
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1s
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1032.602 ; gain = 0.000
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.runs/synth_1
-
-launch_runs synth_1 -jobs 16
-[Wed Dec 22 11:50:05 2021] Launched synth_1...
-Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 16
-[Wed Dec 22 11:50:43 2021] Launched impl_1...
-Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Wed Dec 22 11:51:46 2021] Launched impl_1...
-Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2018.3
-  **** Build date : Dec  7 2018-00:40:27
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
-set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.runs/impl_1/calculator_top.bit} [get_hw_devices xc7a100t_0]
-current_hw_device [get_hw_devices xc7a100t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.runs/impl_1/calculator_top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.runs/synth_1
-
-launch_runs synth_1 -jobs 16
-[Wed Dec 22 11:53:52 2021] Launched synth_1...
-Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 16
-[Wed Dec 22 11:54:55 2021] Launched impl_1...
-Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Wed Dec 22 11:56:03 2021] Launched impl_1...
-Run output will be captured here: C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.runs/impl_1/calculator_top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2204.188 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.srcs/sources_1/ip/clk_div/clk_div_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_div_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.srcs/sources_1/ip/clk_div/clk_div.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_div
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_hex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [VRFC 10-2458] undeclared symbol led_en, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:163]
+INFO: [VRFC 10-2458] undeclared symbol led_ca, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:164]
+INFO: [VRFC 10-2458] undeclared symbol led_cb, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:165]
+INFO: [VRFC 10-2458] undeclared symbol led_cc, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:166]
+INFO: [VRFC 10-2458] undeclared symbol led_cd, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:167]
+INFO: [VRFC 10-2458] undeclared symbol led_ce, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:168]
+INFO: [VRFC 10-2458] undeclared symbol led_cf, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:169]
+INFO: [VRFC 10-2458] undeclared symbol led_cg, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:170]
+INFO: [VRFC 10-2458] undeclared symbol led_dp, assumed default net type wire [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:171]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto bb3654c0b45d4922bab51fd229682c61 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'led_en' [C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v:163]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=41,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_div_clk_wiz
+Compiling module xil_defaultlib.clk_div
+Compiling module xil_defaultlib.calculator_hex
+Compiling module xil_defaultlib.calculator_display
+Compiling module xil_defaultlib.calculator_top
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/calculator_hex.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1s
+index 6 finished
+====================================
+Test end!
+----PASS!!!
+$finish called at time : 16895 ns : File "C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench.v" Line 139
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1s
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2204.188 ; gain = 0.000
+save_wave_config {C:/Users/Administrator/Desktop/CJ-Verilog-Experiments/lab6/calculator_hex/testbench_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 22 16:39:35 2021...
