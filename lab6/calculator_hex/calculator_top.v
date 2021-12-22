@@ -31,15 +31,19 @@ clk_div u_clk_div (
 calculator_hex u_calculator_hex (
     .clk        (clk_g     ),
 	.rst        (rst       ),
-    //add your own code
+    .button     (button    ),
+	.func       (func      ),
+	.num1       (num1      ),
+	.num2       (num2      ),
 	.cal_result (cal_result) 
 );
 
 calculator_display u_calculator_display (
     .clk        (clk_g     ),
 	.rst        (rst       ),
+	.button     (button    ),
 	.cal_result (cal_result),
- 	.led_en     (len_en),
+ 	.led_en     (led_en),
 	.led_ca     (led_ca),
 	.led_cb     (led_cb),
 	.led_cc     (led_cc),
@@ -47,7 +51,7 @@ calculator_display u_calculator_display (
 	.led_ce     (led_ce),
 	.led_cf     (led_cf),
 	.led_cg     (led_cg),
-	.led_dp     (led_dp),
+	.led_dp     (led_dp)
 );
 
 endmodule
